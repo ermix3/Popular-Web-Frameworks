@@ -1,5 +1,16 @@
-<main class="main">
-  <h1>{{ title }}</h1>
-</main>
+<mat-toolbar color="primary">
+  <span>Popular Web Frameworks</span>
+</mat-toolbar>
 
-<router-outlet/>
+<div class="flex-container">
+  <div class="flex-item">
+    <app-framework-table></app-framework-table>
+  </div>
+  <div class="flex-item">
+    <app-framework-chart></app-framework-chart>
+  </div>
+</div>
+
+<mat-toolbar color="primary">
+  <span>© Your Name - <a href="mailto:youremail@example.com"><mat-icon>email</mat-icon></a></span>
+</mat-toolbar>

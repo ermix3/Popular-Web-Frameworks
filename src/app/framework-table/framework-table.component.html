@@ -1,0 +1,14 @@
+<mat-table [dataSource]="frameworks" class="mat-elevation-z8">
+  <ng-container matColumnDef="framework">
+    <mat-header-cell *matHeaderCellDef> Framework </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.framework}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="percent">
+    <mat-header-cell *matHeaderCellDef> Percent </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.percent}}% </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
