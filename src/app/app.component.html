@@ -1,3 +1,12 @@
+<!--
+/**
+ * @author Ahmad Tarkmani
+ * @contact Tarkmani@sheridancollge.ca
+ * @date 2024-07-20
+ */
+ -->
+
+
 <mat-toolbar color="primary" class="mat-toolbar">
   <span class="toolbar-title">Popular Web Frameworks</span>
   <div class="buttons">
@@ -22,10 +31,29 @@
       </li>
       <li># Of Respondents: 71,802</li>
     </ul>
-    <app-framework-table></app-framework-table>
+    <mat-table [dataSource]="frameworks" class="alternating-rows">
+      <ng-container matColumnDef="framework">
+        <mat-header-cell *matHeaderCellDef class="custom-header-cell center-content"> Framework</mat-header-cell>
+        <mat-cell *matCellDef="let element" class="custom-cell"> {{ element.framework }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="percent">
+        <mat-header-cell *matHeaderCellDef class="custom-header-cell center-content"> Percent</mat-header-cell>
+        <mat-cell *matCellDef="let element" class="custom-cell"> {{ element.percent }}</mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns" class="mat-header-row"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;" class="mat-row"></mat-row>
+    </mat-table>
+
   </div>
   <div class="flex-item">
-    <app-framework-chart [chartType]="chartType"></app-framework-chart>
+    <canvas baseChart
+            [type]="chartType"
+            [data]="chartData"
+            [options]="chartOptions"
+    >
+    </canvas>
   </div>
 </div>
 

@@ -1,3 +1,10 @@
+/**
+ * @author Ahmad Tarkmani
+ * @contact Tarkmani@sheridancollge.ca
+ * @date 2024-07-20
+ */
+
+
 import {Component, inject, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogContent, MatDialogRef, MatDialogTitle} from "@angular/material/dialog";
 import {MatIcon} from "@angular/material/icon";

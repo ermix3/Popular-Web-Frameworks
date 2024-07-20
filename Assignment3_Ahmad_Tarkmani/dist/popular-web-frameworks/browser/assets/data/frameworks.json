@@ -1,0 +1,78 @@
+[
+    {
+        "framework": "Node.js",
+        "percent": 42.65
+    },
+    {
+        "framework": "React",
+        "percent": 40.58
+    },
+    {
+        "framework": "jQuery",
+        "percent": 21.98
+    },
+    {
+        "framework": "Express",
+        "percent": 19.28
+    },
+    {
+        "framework": "Angular",
+        "percent": 17.46
+    },
+    {
+        "framework": "Next.js",
+        "percent": 16.67
+    },
+    {
+        "framework": "ASP.NET CORE",
+        "percent": 16.57
+    },
+    {
+        "framework": "Vue.js",
+        "percent": 16.38
+    },
+    {
+        "framework": "WordPress",
+        "percent": 13.38
+    },
+    {
+        "framework": "ASP.NET",
+        "percent": 12.79
+    },
+    {
+        "framework": "Flask",
+        "percent": 12.16
+    },
+    {
+        "framework": "Spring Boot",
+        "percent": 11.95
+    },
+    {
+        "framework": "Django",
+        "percent": 11.47
+    },
+    {
+        "framework": "Laravel",
+        "percent": 7.58
+    },
+    {
+        "framework": "FastAPI",
+        "percent": 7.42
+    },
+    {
+        "framework": "AngularJS",
+        "percent": 7.21
+    },
+    {
+        "framework": "Svelte",
+        "percent": 6.62
+    },
+    {
+        "framework": "Ruby on Rails",
+        "percent": 5.49
+    },
+    {
+        "framework": "NestJS",
+        "percent": 5.13
+    }
+]

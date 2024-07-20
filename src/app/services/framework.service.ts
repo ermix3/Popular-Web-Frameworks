@@ -1,3 +1,9 @@
+/**
+ * @author Ahmad Tarkmani
+ * @contact Tarkmani@sheridancollge.ca
+ * @date 2024-07-20
+ */
+
 import {inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";

@@ -1,3 +1,9 @@
+/**
+ * @author Ahmad Tarkmani
+ * @contact Tarkmani@sheridancollge.ca
+ * @date 2024-07-20
+ */
+
 .mat-toolbar {
   display: flex;
   justify-content: center;
@@ -15,7 +21,7 @@
   justify-content: center;
   align-items: center;
   margin-left: 0.5rem !important;
-  color:white;
+  color: white;
   text-decoration: none;
 }
 
@@ -23,6 +29,7 @@
   flex: 1;
   text-align: center;
 }
+
 .mat-toolbar .buttons {
   display: flex;
   align-items: center;
@@ -36,6 +43,41 @@
   background: #00b2ce !important;
 }
 
+/* style charts */
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.custom-header-cell {
+  padding: 0 6px !important;
+}
+
+.custom-cell {
+  padding: 0 6px !important;
+}
+
+.mat-header-row {
+  background-color: #eee;
+  text-align: center !important;
+  font-weight: bold;
+}
+
+.alternating-rows .mat-row:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+
+.alternating-rows .mat-row:nth-child(even) {
+  background-color: white;
+}
+
+.mat-mdc-row,
+.mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+}
 
 .flex-container {
   display: flex;
@@ -46,11 +88,14 @@
 
 .flex-item {
   flex: 1 1 0;
+  min-height: 500px;
+  width: 100%;
 }
 
 @media (max-width: 400px) {
   .flex-item {
     flex: 1 1 100%;
     min-height: 500px;
+    width: 100%;
   }
 }
