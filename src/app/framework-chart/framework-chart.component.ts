@@ -25,8 +25,8 @@ export class FrameworkChartComponent implements OnInit {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
-      title: { display: true, text: 'Web Frameworks' },
-      legend: { display: true, position: 'bottom' }
+      title: {display: true, text: 'Popular Web Frameworks'},
+      legend: {display: true, position: 'bottom'}
     },
     // scales: {
     //   x: {},

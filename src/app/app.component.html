@@ -1,9 +1,25 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="mat-toolbar">
   <span>Popular Web Frameworks</span>
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="chart">Chart</mat-button-toggle>
+    <mat-button-toggle value="pie">Pie</mat-button-toggle>
+  </mat-button-toggle-group>
+  <button mat-icon-button color="accent" aria-label="Example icon button with a home icon">
+    <mat-icon>info</mat-icon>
+  </button>
 </mat-toolbar>
 
 <div class="flex-container">
   <div class="flex-item">
+    <p>
+      Most used web frameworks or technologies among developers worldwide. 2023
+    </p>
+    <ul>
+      <li>Source <a
+        href="https://survey.stackoverflow.co/2023/#section-most-popular-technologies-web-frameworks-and-technologies">stackoverflow</a>
+      </li>
+      <li># Of Respondents: 71,802</li>
+    </ul>
     <app-framework-table></app-framework-table>
   </div>
   <div class="flex-item">
@@ -11,6 +27,11 @@
   </div>
 </div>
 
-<mat-toolbar color="primary">
-  <span>© Your Name - <a href="mailto:youremail@example.com"><mat-icon>email</mat-icon></a></span>
+<mat-toolbar color="primary" class="mat-toolbar">
+  <span>
+    <a href="mailto:Tarkmani@sheridancollge.ca">
+      <mat-icon class="text-white">email</mat-icon>
+    </a>
+    <span>Ahmad Tarkmani</span>
+  </span>
 </mat-toolbar>

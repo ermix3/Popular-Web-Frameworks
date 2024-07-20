@@ -1,14 +1,14 @@
-<mat-table [dataSource]="frameworks" class="mat-elevation-z8">
+<mat-table [dataSource]="frameworks" class="alternating-rows">
   <ng-container matColumnDef="framework">
-    <mat-header-cell *matHeaderCellDef> Framework </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.framework}} </mat-cell>
+    <mat-header-cell *matHeaderCellDef class="custom-header-cell center-content"> Framework</mat-header-cell>
+    <mat-cell *matCellDef="let element" class="custom-cell"> {{ element.framework }}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="percent">
-    <mat-header-cell *matHeaderCellDef> Percent </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.percent}}% </mat-cell>
+    <mat-header-cell *matHeaderCellDef class="custom-header-cell center-content"> Percent</mat-header-cell>
+    <mat-cell *matCellDef="let element" class="custom-cell"> {{ element.percent }}</mat-cell>
   </ng-container>
 
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  <mat-header-row *matHeaderRowDef="displayedColumns" class="mat-header-row"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;" class="mat-row"></mat-row>
 </mat-table>
