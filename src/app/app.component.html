@@ -1,12 +1,14 @@
 <mat-toolbar color="primary" class="mat-toolbar">
-  <span>Popular Web Frameworks</span>
-  <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-    <mat-button-toggle value="chart">Chart</mat-button-toggle>
-    <mat-button-toggle value="pie">Pie</mat-button-toggle>
-  </mat-button-toggle-group>
-  <button mat-icon-button color="accent" aria-label="Example icon button with a home icon">
-    <mat-icon>info</mat-icon>
-  </button>
+  <span class="toolbar-title">Popular Web Frameworks</span>
+  <div class="buttons">
+    <mat-button-toggle-group [(ngModel)]="chartType" aria-label="Font Style">
+      <mat-button-toggle value="bar">Bar</mat-button-toggle>
+      <mat-button-toggle value="pie">Pie</mat-button-toggle>
+    </mat-button-toggle-group>
+    <button mat-icon-button class="color-light-blue" (click)="openDialog()">
+      <mat-icon>error_outline</mat-icon>
+    </button>
+  </div>
 </mat-toolbar>
 
 <div class="flex-container">
@@ -23,15 +25,13 @@
     <app-framework-table></app-framework-table>
   </div>
   <div class="flex-item">
-    <app-framework-chart></app-framework-chart>
+    <app-framework-chart [chartType]="chartType"></app-framework-chart>
   </div>
 </div>
 
-<mat-toolbar color="primary" class="mat-toolbar">
-  <span>
-    <a href="mailto:Tarkmani@sheridancollge.ca">
-      <mat-icon class="text-white">email</mat-icon>
-    </a>
-    <span>Ahmad Tarkmani</span>
-  </span>
+<mat-toolbar color="primary" class="mat-toolbar bg-light-blue">
+  <a href="mailto:Tarkmani@sheridancollge.ca" class="mail-link">
+    <mat-icon >mail_outline</mat-icon>
+  </a>
+  <div>Ahmad Tarkmani</div>
 </mat-toolbar>

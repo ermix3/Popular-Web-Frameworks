@@ -1,7 +1,38 @@
-.mat-toolbar{
+.mat-toolbar {
   display: flex;
   justify-content: center;
-  /*width:100% !important;*/
+  align-items: center;
+}
+
+.mat-toolbar-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mail-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem !important;
+  color:white;
+}
+
+.mat-toolbar .toolbar-title {
+  flex: 1;
+  text-align: center;
+}
+.mat-toolbar .buttons {
+  display: flex;
+  align-items: center;
+}
+
+.color-light-blue {
+  color: #00b2ce !important;
+}
+
+.bg-light-blue {
+  background: #00b2ce !important;
 }
 
 
@@ -10,17 +41,15 @@
   flex-wrap: wrap;
   gap: 10px;
   padding: 10px;
-  /*width:100%;*/
 }
 
 .flex-item {
-  flex: 1 1 0%;
-  /*min-width: 400px;*/
-  min-height: 500px;
+  flex: 1 1 0;
 }
 
 @media (max-width: 400px) {
   .flex-item {
     flex: 1 1 100%;
+    min-height: 500px;
   }
 }

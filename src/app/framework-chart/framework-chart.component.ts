@@ -1,7 +1,8 @@
-import {Component, inject, OnInit, ViewChild} from '@angular/core';
+import {Component, inject, Input, OnInit, ViewChild} from '@angular/core';
 import {ChartData, ChartOptions, ChartType} from "chart.js";
 import {FrameworkService} from "../services/framework.service";
 import {BaseChartDirective} from "ng2-charts";
+import {Framework} from "../interfaces/framework";
 
 @Component({
   selector: 'app-framework-chart',
@@ -14,42 +15,41 @@ import {BaseChartDirective} from "ng2-charts";
 })
 export class FrameworkChartComponent implements OnInit {
   private frameworkService = inject(FrameworkService);
+  @Input() chartType: "bar" | "pie" = "bar";
   @ViewChild(BaseChartDirective) chart: BaseChartDirective<'bar'> | undefined;
-  chartType: "bar" = "bar";
-  chartData: ChartData<'bar'> = {
+  chartData: ChartData<typeof this.chartType> = {
     labels: [],
     datasets: []
   };
-  chartOptions: ChartOptions<'bar'> = {
+  chartOptions: ChartOptions<typeof this.chartType> = {
     indexAxis: 'y',
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
       title: {display: true, text: 'Popular Web Frameworks'},
       legend: {display: true, position: 'bottom'}
-    },
-    // scales: {
-    //   x: {},
-    //   y: {
-    //     min: 10,
-    //   },
-    // },
+    }
   };
 
 
   ngOnInit(): void {
     this.frameworkService.getFrameworks().subscribe(data => {
       this.chartData.labels = data.map(f => f.framework);
+      let colors = this.generateRandomColors(data);
       this.chartData.datasets = [
         {
           label: 'Percent',
           data: data.map(f => f.percent),
-          backgroundColor: '#ff3d3366',
-          borderColor: '#ff3d33ff',
+          backgroundColor: colors,
+          borderColor: colors,
           borderWidth: 1
         }
       ];
       this.chart?.update();
     });
+  }
+
+  generateRandomColors(data: Framework[]): string[] {
+    return data.map(f => `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '1')}`);
   }
 }

@@ -1,0 +1,14 @@
+.about-mail-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bg-light-blue {
+  background: #00b2ce !important;
+}
+
+.about-close-btn{
+  display: flex;
+  justify-content: center;
+}
