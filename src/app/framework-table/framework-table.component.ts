@@ -9,6 +9,7 @@ import {
   MatRow, MatRowDef,
   MatTable
 } from "@angular/material/table";
+import {Framework} from "../interfaces/framework";
 
 @Component({
   selector: 'app-framework-table',
@@ -31,13 +32,20 @@ import {
 export class FrameworkTableComponent implements OnInit {
   private frameworkService = inject(FrameworkService);
 
-  frameworks: any[] = [];
+  frameworks: Framework[] = [];
   displayedColumns: string[] = ['framework', 'percent'];
 
 
   ngOnInit(): void {
-    this.frameworkService.getFrameworks().subscribe(data => {
-      this.frameworks = data;
-    });
+    this.frameworkService
+      .getFrameworks()
+      .subscribe({
+        next: (data: Framework[]) => {
+          this.frameworks = data;
+        },
+        error: (error: any) => {
+          console.error('Error loading frameworks', error);
+        }
+      });
   }
 }

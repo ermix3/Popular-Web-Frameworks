@@ -20,7 +20,7 @@ import {FormsModule} from "@angular/forms";
 })
 export class AppComponent {
   public dialog = inject(MatDialog);
-  title = 'Popular-Web-Frameworks';
+  title = 'Popular Web Frameworks';
   chartType: 'bar'|'pie'='bar';
 
   openDialog() {

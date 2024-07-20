@@ -14,8 +14,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 0.5rem !important;
+  margin-left: 0.5rem !important;
   color:white;
+  text-decoration: none;
 }
 
 .mat-toolbar .toolbar-title {
